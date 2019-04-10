@@ -1,6 +1,25 @@
 .brand-logo{
-    margin-left: 3%;
     font-size: 200%;
+}
+.row img{
+    height:10%;
+    width: auto;
+    max-height: 300px;
+}
+#img-small{
+    margin-left:18%;
+    padding-top: 10px;
+}
+.row a{
+    font-size: 200%;
+    color: #fff;
+}
+.row a:hover{
+    color: #ffd700;
+    transform: translateY(-10px);
+}
+.row span{
+    margin-top: 4%;
 }
 
 
@@ -11,5 +30,7 @@
 
 }
 @media screen and (min-width:950px){
-
+    .row a{
+        font-size: 500%;
+    }
 }
