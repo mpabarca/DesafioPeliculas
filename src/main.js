@@ -9,11 +9,8 @@ getMovies:()=>{
     fetch(database)
     .then((success) => success.json())
     .then((response)=> {
-        console.log(response);
-        let movies= response.Search
-        console.log(movies);
+        let movies= response.Search;
         movies.map((element,i)=>{
-            console.log(element);
             let idMovie = element.imdbID;
             document.getElementById('root').innerHTML+= `
             <div id='${idMovie}'>
@@ -38,11 +35,9 @@ getInfo:(idMovie,click)=>{
     console.log()
 
         let database= 'http://www.omdbapi.com/?i='+idMovie+'&plot=full&apikey=341223be';
-        console.log(database);
         fetch(database)
         .then((success) => success.json())
         .then((response)=> {
-            console.log(response);
             if (click===0){
                 click=1;
                 document.getElementById(idMovie).innerHTML= `

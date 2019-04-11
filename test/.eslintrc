@@ -1,6 +1,6 @@
 {
     "env":{
-        "jest":true,
+        "mocha":true,
         "node":true
     }
 }
