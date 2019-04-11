@@ -1,5 +1,6 @@
+window.main={
 
-function getMovies(){
+getMovies:()=>{
     let movieArray=['moon','harry_potter','magic','lord','women','planet','sakura','beauty','end','coco'];
     let numberRandom = Math.floor(Math.random() * 10); 
     let wordRandom = movieArray[numberRandom]
@@ -32,8 +33,8 @@ function getMovies(){
     })
     .catch((error) => console.log(error));
     
-}
-function getInfo(idMovie,click){
+},
+getInfo:(idMovie,click)=>{
     console.log()
 
         let database= 'http://www.omdbapi.com/?i='+idMovie+'&plot=full&apikey=341223be';
@@ -59,7 +60,7 @@ function getInfo(idMovie,click){
                     <div class="row">
                         <div class="col s12 m12">
                             <div class="card blue-grey darken-1">
-                                <img id="img-small" class="show-on-small" src="${response.Poster}">
+                                <img id="img-small" class="hide-on-large-only" src="${response.Poster}">
                                 <div class="row card-content white-text">
                                     <img class="col m3 l3 hide-on-small-only" src="${response.Poster}">
                                     <div class="col s10 m9">
@@ -93,8 +94,5 @@ function getInfo(idMovie,click){
         })
         .catch((error) => console.log(error));
 
-    
-    
-
-
+}
 }
