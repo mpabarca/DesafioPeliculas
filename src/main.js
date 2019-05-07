@@ -18,7 +18,7 @@ getMovies:()=>{
                     <div class="col s12 m12">
                         <div class="card blue-grey darken-1">
                             <div class="row card-content white-text">
-                                <a class="col s2 m2" onclick="getInfo('${idMovie}',0)"><i class="fas fa-film"></i></a>
+                                <a class="col s2 m2" onclick="window.main.getInfo('${idMovie}',0)"><i class="fas fa-film"></i></a>
                                 <span class="card-title col s10 m10">${element.Title}</span>
                             </div>
                         </div>
@@ -32,7 +32,6 @@ getMovies:()=>{
     
 },
 getInfo:(idMovie,click)=>{
-    console.log()
 
         let database= 'http://www.omdbapi.com/?i='+idMovie+'&plot=full&apikey=341223be';
         fetch(database)
@@ -46,7 +45,7 @@ getInfo:(idMovie,click)=>{
                         <div class="col s12 m12">
                             <div class="card blue-grey darken-1">
                                 <div class="row card-content white-text">
-                                    <a class="col s2 m2" onclick="getInfo('${idMovie}',${click})"><i class="fas fa-film"></i></a>
+                                    <a class="col s2 m2" onclick="window.main.getInfo('${idMovie}',${click})"><i class="fas fa-film"></i></a>
                                     <span class="card-title col s10 m10">${response.Title}</span>
                                 </div>
                             </div>
@@ -77,7 +76,7 @@ getInfo:(idMovie,click)=>{
                                 <div class="col s12 m12">
                                     <div class="card blue-grey darken-1">
                                         <div class="row card-content white-text">
-                                            <a class="col s2 m2" onclick="getInfo('${idMovie}',${click})"><i class="fas fa-film"></i></a>
+                                            <a class="col s2 m2" onclick="window.main.getInfo('${idMovie}',${click})"><i class="fas fa-film"></i></a>
                                             <span class="card-title col s10 m10">${response.Title}</span>
                                         </div>
                                     </div>
